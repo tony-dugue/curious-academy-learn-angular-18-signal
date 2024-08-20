@@ -1,0 +1,15 @@
+<h2>{{ titre() }}</h2>
+<table>
+  <tbody>
+    @for (vinyl of items(); track vinyl.nom) {
+    <tr>
+      <td>{{ vinyl.nom }}</td>
+      <td>{{ vinyl.dateSortie }}</td>
+    </tr>
+    } @empty {
+    <td>Aucune ligne !</td>
+    }
+  </tbody>
+</table>
+
+<button (click)="clickToAddNewVinyl()">Nouveau Vinyl</button>
