@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Vinyl } from '../../models/vinyl';
 import { TableVinylsComponent } from '../table-vinyls/table-vinyls.component';
 import { CreateVinylComponent } from '../create-vinyl/create-vinyl.component';
+import { GetAllVinylsService } from '../../services/get-all-vinyls.service';
 
 @Component({
   selector: 'tdu-list-vinyls',
@@ -11,6 +12,8 @@ import { CreateVinylComponent } from '../create-vinyl/create-vinyl.component';
   styleUrl: './list-vinyls.component.css',
 })
 export class ListVinylsComponent {
+  private readonly service = inject(GetAllVinylsService);
+
   readyToCreate = signal<boolean>(false);
 
   vinylList: Vinyl[] = [
@@ -20,6 +23,6 @@ export class ListVinylsComponent {
   ];
 
   prepareCreation(): void {
-    this.readyToCreate.set(true)
+    this.readyToCreate.set(true);
   }
 }
