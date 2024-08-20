@@ -1,8 +1,6 @@
-<tdu-table-vinyls
-  titre="Mes vinyls"
-  [items]="vinylList"
-  (toCreate)="prepareCreation()"
-/>
+<tdu-main-filters />
+
+<tdu-table-vinyls titre="Mes vinyls" [items]="vinylList" (toCreate)="prepareCreation()" />
 
 @if (readyToCreate()) {
 <tdu-create-vinyl />
