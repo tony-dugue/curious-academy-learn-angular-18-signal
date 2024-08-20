@@ -1,1 +1,12 @@
-<p>list-vinyls works!</p>
+<table>
+  <tbody>
+    @for (vinyl of vinylList; track vinyl.nom) {
+    <tr>
+      <td>{{ vinyl.nom }}</td>
+      <td>{{ vinyl.dateSortie }}</td>
+    </tr>
+    } @empty {
+    <td>Aucune ligne !</td>
+    }
+  </tbody>
+</table>

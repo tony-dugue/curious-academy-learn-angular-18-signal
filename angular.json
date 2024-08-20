@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "projects/vinylcollection",
       "sourceRoot": "projects/vinylcollection/src",
-      "prefix": "app",
+      "prefix": "tdu",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
