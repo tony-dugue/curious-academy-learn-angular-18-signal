@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { map, Observable, of } from 'rxjs';
 import { Persons } from '../models';
+import { environment } from '../../../../../environments/environment.development';
 
 type OnePeopleApiReturn = {
   name: string;
@@ -20,14 +21,12 @@ export class PeopleService {
 
   getAll(pageIndex = 1): Observable<Persons> {
     // TODO: put this url in a config variable (maybe var env)
-    return this.httpClient
-      .get<PeopleApiReturn>('https://swapi.dev/api/people')
-      .pipe(
-        map((returnApi) => {
-          return returnApi.results.map((item) => ({
-            name: `${item.gender}. ${item.name}`,
-          }));
-        })
-      );
+    return this.httpClient.get<PeopleApiReturn>(environment.apis.people).pipe(
+      map((returnApi) => {
+        return returnApi.results.map((item) => ({
+          name: `${item.gender}. ${item.name}`,
+        }));
+      })
+    );
   }
 }
