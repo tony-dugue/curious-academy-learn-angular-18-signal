@@ -1,1 +1,7 @@
-<tdu-form-vinyl (saveItem)="saveOne($event)"/>
+<h1>Ajouter un nouveau vinyl</h1>
+
+@if (isSaving()) {
+<mat-spinner />
+}
+
+<tdu-form-vinyl (saveItem)="saveOne($event)" />
