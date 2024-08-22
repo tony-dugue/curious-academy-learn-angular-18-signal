@@ -3,7 +3,7 @@
  */
 export interface Vinyl {
   nom: string;
-  dateSortie: Date;
+  releaseDate: Date;
 }
 
 export type Vinyls = Vinyl[];
