@@ -1,9 +1,9 @@
 <h2>{{ titre() }}</h2>
 <table>
   <tbody>
-    @for (vinyl of items(); track vinyl.nom) {
+    @for (vinyl of items(); track vinyl.label) {
     <tr>
-      <td>{{ vinyl.nom }}</td>
+      <td>{{ vinyl.label }}</td>
       <td>{{ vinyl.releaseDate }}</td>
     </tr>
     } @empty {

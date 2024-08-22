@@ -36,7 +36,7 @@ export class FormVinylComponent {
   inputIcon = signal('sentiment_very_satisfied');
 
   saveItem = output<Vinyl>();
-  item: Vinyl = { nom: 'Test vinyl', releaseDate: new Date() };
+  item: Vinyl = { label: 'Test vinyl', releaseDate: new Date() };
 
   submitToSave(): void {
     this.saveItem.emit(this.item);

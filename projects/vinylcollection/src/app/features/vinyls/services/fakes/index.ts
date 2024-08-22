@@ -5,10 +5,13 @@ import { GetAllVinyls } from '../get-all-vinyls.service';
 export const fakeInMemoryGetAllVinylsService: GetAllVinyls = {
   getAll(): Observable<Vinyls> {
     const table: Vinyls = [
-      { nom: 'Radiohead - Ok Computer', releaseDate: new Date(2023, 1, 1) },
-      { nom: 'The Clash - London Calling', releaseDate: new Date(2023, 1, 1) },
+      { label: 'Radiohead - Ok Computer', releaseDate: new Date(2023, 1, 1) },
       {
-        nom: 'Pink FLoyd - The Dark Side of the Moon',
+        label: 'The Clash - London Calling',
+        releaseDate: new Date(2023, 1, 1),
+      },
+      {
+        label: 'Pink FLoyd - The Dark Side of the Moon',
         releaseDate: new Date(),
       },
     ];
