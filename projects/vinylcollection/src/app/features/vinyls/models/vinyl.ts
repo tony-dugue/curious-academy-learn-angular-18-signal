@@ -6,13 +6,4 @@ export interface Vinyl {
   dateSortie: Date;
 }
 
-
-
-
-
-
-
-
-
-
-
+export type Vinyls = Vinyl[];

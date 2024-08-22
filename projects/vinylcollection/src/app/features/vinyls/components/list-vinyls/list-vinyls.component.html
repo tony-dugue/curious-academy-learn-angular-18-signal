@@ -1,6 +1,15 @@
 <tdu-main-filters />
 
-<tdu-table-vinyls titre="Mes vinyls" [items]="vinylList" (toCreate)="prepareCreation()" />
+<!-- sans utiliser de Signal (ancienne méthode)
+@if (vinyls$ | async; as vinylList) {
+  <tdu-table-vinyls titre="Liste de mes vinyls" [items]="vinylList" (toCreate)="prepareCreation()" />
+}
+-->
+
+<!-- Avec Signal -->
+@if (vinyls$$(); as vinylList) {
+  <tdu-table-vinyls titre="Liste de mes vinyls" [items]="vinylList" (toCreate)="prepareCreation()" />
+}
 
 @if (readyToCreate()) {
 <tdu-create-vinyl />
