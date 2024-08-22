@@ -5,5 +5,6 @@ import { vinylsRoutes } from './features/vinyls/vinyls.routes';
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'main' },
   { path: 'main', component: MainComponent },
-  ...vinylsRoutes
+  //...vinylsRoutes
+  { path: 'vinyls', children: vinylsRoutes }
 ];
