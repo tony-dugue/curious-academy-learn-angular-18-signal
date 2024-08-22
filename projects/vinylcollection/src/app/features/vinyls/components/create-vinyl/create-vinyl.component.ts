@@ -4,8 +4,8 @@ import { Vinyl } from '../../models/vinyl';
 import { SaveOneVinylService } from '../../services/save-one-vinyl.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { StatePanel } from '../../../../core/tools/custom-types';
 
-type StatePanel = 'success' | 'failed';
 @Component({
   selector: 'tdu-create-vinyl',
   standalone: true,

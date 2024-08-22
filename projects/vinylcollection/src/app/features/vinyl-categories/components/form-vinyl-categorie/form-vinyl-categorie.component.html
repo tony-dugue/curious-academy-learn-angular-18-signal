@@ -1,1 +1,26 @@
-<p>form-vinyl-categorie works!</p>
+<form [formGroup]="vinylCategoryForm" (ngSubmit)="submitToSave()">
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Catégorie</mat-label>
+        <input name="label" matInput placeholder="Saisir une catégorie" formControlName="label" />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <input name="type" matInput placeholder="Saisir un type" formControlName="type" />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button mat-flat-button [disabled]="! vinylCategoryForm.valid">Sauvegarder</button>
+    </div>
+  </div>
+</form>
+

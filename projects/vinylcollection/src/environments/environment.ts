@@ -2,6 +2,7 @@ export const environment = {
   isProduction: true,
   apis: {
     people: '',
-    vinyl: ''
+    vinyl: '',
+    vinylCategorie: ''
   }
 };

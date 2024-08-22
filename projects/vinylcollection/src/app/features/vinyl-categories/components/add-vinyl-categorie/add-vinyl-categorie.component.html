@@ -1,1 +1,5 @@
-<tdu-form-vinyl-categorie />
+@if(isSaving()) {
+<mat-spinner />
+}
+
+<tdu-form-vinyl-categorie [item]="newItem" (toSave)="createOne($event)" />
